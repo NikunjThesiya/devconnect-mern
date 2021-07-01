@@ -14,7 +14,7 @@ const Header = () => {
 	return (
 		<div className="sticky top-0 z-50">
 			<div className="bg-dc-gray w-full px-4 py-3 sm:px-10 sm:py-3 flex items-center justify-between space-x-2 sm:space-x-0 border-b border-gray-100">
-				<Link to="/">
+				<Link to="/" onClick={() => router.push("/")}>
 					<Image
 						src={Logo}
 						width={48}

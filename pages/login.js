@@ -35,10 +35,7 @@ function Login() {
 						/>
 					</div>
 
-					<button
-						type="submit"
-						className="bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base xl:text-lg x-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out"
-					>
+					<button type="submit" className="btn">
 						Sign In
 					</button>
 				</form>
@@ -53,7 +50,7 @@ function Login() {
 					</span>
 				</div>
 			</div>
-			<div className="w-1/2 p-10 hidden lg:flex items-center bg-dc-gray">
+			<div className="w-1/2 p-12 hidden lg:flex items-center bg-dc-gray">
 				<Image
 					src={RegisterImg}
 					width={1000}
