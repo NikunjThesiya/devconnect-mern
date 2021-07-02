@@ -9,9 +9,9 @@ import { useRouter } from "next/router";
 import PostComment from "./PostComment";
 import Image from "next/image";
 
-const ReadMore = ({ children }) => {
+const ReadMore = ({ description }) => {
 	const router = useRouter();
-	const text = children;
+	const text = description;
 	const [isReadMore, setIsReadMore] = useState(true);
 	const toggleReadMore = () => {
 		setIsReadMore(!isReadMore);
@@ -33,7 +33,7 @@ const ReadMore = ({ children }) => {
 	);
 };
 
-const Post = () => {
+const Post = ({ profile, image, description, likes, comments }) => {
 	const [showModal, setShowModal] = useState(false);
 	return (
 		<div className="sm:w-[500px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7 ">
@@ -50,7 +50,7 @@ const Post = () => {
 						to="/userprofile"
 						className="text-xs sm:text-sm md:text-base text-gray-600 font-semibold"
 					>
-						Nikunj Thesiya
+						{profile}
 					</span>
 				</div>
 				<div className="dropdown realtive">
@@ -71,7 +71,7 @@ const Post = () => {
 			</div>
 			<div>
 				<img
-					src="https://images.unsplash.com/photo-1619782087505-e1544bc70e1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=466&q=80"
+					src={image}
 					alt="post img"
 					className="rounded-3xl w-full shadow-xl my-4 sm:my-5"
 				/>
@@ -79,14 +79,8 @@ const Post = () => {
 
 			<div className="flex items-start justify-start my-4 sm:my-5">
 				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-2">
-					<span className="font-semibold truncate">Nikunj Thesiya</span>
-					<ReadMore>
-						सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल
-						सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो
-						होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र
-						में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो
-						चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️
-					</ReadMore>
+					<span className="font-semibold truncate">{profile}</span>
+					<ReadMore description={description} />
 				</p>
 			</div>
 
@@ -94,14 +88,14 @@ const Post = () => {
 				<div className="flex items-center space-x-5">
 					<div className="flex items-center space-x-2 rounded-full bg-white text-gray-600 shadow-xl py-2 px-3 cursor-pointer sm:px-4">
 						<BsHeart className="" />
-						<p className="text-xs sm:text-sm">1038</p>
+						<p className="text-xs sm:text-sm">{likes}</p>
 					</div>
 					<div
 						className="flex items-center space-x-2 rounded-full bg-white text-gray-600 shadow-xl py-2 px-3 sm:px-4 cursor-pointer"
 						onClick={() => setShowModal(true)}
 					>
 						<FaRegComment className="" />
-						<p className="text-xs sm:text-sm">53</p>
+						<p className="text-xs sm:text-sm">{comments}</p>
 					</div>
 					{showModal ? (
 						<div className="bg-white">
@@ -149,9 +143,6 @@ const Post = () => {
 							<div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
 						</div>
 					) : null}
-				</div>
-				<div className="bg-white rounded-full p-2 shadow-xl text-gray-600">
-					<BsBookmark className="text-gray-500" />
 				</div>
 			</div>
 		</div>
