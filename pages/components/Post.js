@@ -60,7 +60,7 @@ const Post = () => {
 					<ul class="dropdown-menu absolute hidden text-gray-700 text-xs sm:text-sm border border-gray-300 shadow-lg rounded-lg">
 						<li class="">
 							<span
-								className="rounded-md bg-white hover:bg-gray-500 hover:text-white py-2 sm:py-2 px-2 sm:px-4 block whitespace-no-wrap"
+								className="rounded-md bg-white hover:bg-dc-blue hover:text-white py-2 sm:py-2 px-2 sm:px-4 block whitespace-no-wrap cursor-pointer"
 								to="/"
 							>
 								Delete
@@ -76,7 +76,21 @@ const Post = () => {
 					className="rounded-3xl w-full shadow-xl my-4 sm:my-5"
 				/>
 			</div>
-			<div className="flex items-center justify-between text-xl sm:text-2xl ">
+
+			<div className="flex items-start justify-start my-4 sm:my-5">
+				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-2">
+					<span className="font-semibold truncate">Nikunj Thesiya</span>
+					<ReadMore>
+						सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल
+						सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो
+						होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र
+						में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो
+						चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️
+					</ReadMore>
+				</p>
+			</div>
+
+			<div className="flex items-center justify-between text-xl sm:text-2xl mt-5">
 				<div className="flex items-center space-x-5">
 					<div className="flex items-center space-x-2 rounded-full bg-white text-gray-600 shadow-xl py-2 px-3 cursor-pointer sm:px-4">
 						<BsHeart className="" />
@@ -139,18 +153,6 @@ const Post = () => {
 				<div className="bg-white rounded-full p-2 shadow-xl text-gray-600">
 					<BsBookmark className="text-gray-500" />
 				</div>
-			</div>
-			<div className="flex items-start pt-4 justify-start">
-				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-2">
-					<span className="font-semibold truncate">Nikunj Thesiya</span>
-					<ReadMore>
-						सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल
-						सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो
-						होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️ सफ़र
-						में धूप तो होगी जो चल सको तो चलो❤️ सफ़र में धूप तो होगी जो चल सको तो
-						चलो❤️ सफ़र में धूप तो होगी जो चल सको तो चलो❤️
-					</ReadMore>
-				</p>
 			</div>
 		</div>
 	);

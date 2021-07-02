@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import RegisterImg from "../images/login.jpeg";
@@ -6,6 +7,16 @@ function Login() {
 	const router = useRouter();
 	return (
 		<div className="w-full flex relative">
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta charSet="utf-8" />
+				<meta
+					name="description"
+					content="DevConnect is a social network for Programmers or Developers. You can build your profile or portfolio. You can upload post and connect with other Programmers."
+				/>
+				<title>Login</title>
+				<link rel="icon" href="./logo.svg" />
+			</Head>
 			<div className="flex flex-col items-start w-full lg:w-1/2 bg-white rounded-2xl p-10 sm:px-12 sm:py-12 border border-transparent text-sm sm:text-base">
 				<h2 className="text-dc-blue text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
 					Sign In

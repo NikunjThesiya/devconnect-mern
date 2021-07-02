@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import RegisterImg from "../images/register.jpeg";
@@ -6,6 +7,16 @@ function Register() {
 	const router = useRouter();
 	return (
 		<div className="w-full flex relative">
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta charSet="utf-8" />
+				<meta
+					name="description"
+					content="DevConnect is a social network for Programmers or Developers. You can build your profile or portfolio. You can upload post and connect with other Programmers."
+				/>
+				<title>Register</title>
+				<link rel="icon" href="./logo.svg" />
+			</Head>
 			<div className="w-1/2 p-12 hidden lg:flex items-center justify-center bg-dc-gray">
 				<Image
 					src={RegisterImg}
