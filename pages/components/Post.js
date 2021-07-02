@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Profile from "../../images/profile.jpg";
-import ReactReadMoreReadLess from "react-read-more-read-less";
 import { BsHeart, BsBookmark, BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegComment } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -8,6 +7,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
 import PostComment from "./PostComment";
 import Image from "next/image";
+import ReadMore from "./ReadMore";
 
 const Post = ({ profile, image, description, likes, comments }) => {
 	const router = useRouter();
@@ -55,15 +55,8 @@ const Post = ({ profile, image, description, likes, comments }) => {
 			</div>
 
 			<div className="flex items-start justify-start my-4 sm:my-5">
-				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-3">
-					<span className="font-semibold truncate">{profile}</span>{" "}
-					<ReactReadMoreReadLess
-						charLimit={150}
-						readMoreText={"Read more ▼"}
-						readLessText={"Read less ▲"}
-					>
-						{description}
-					</ReactReadMoreReadLess>
+				<p className="text-xs sm:text-sm  text-gray-600 text-left">
+					<ReadMore>{description}</ReadMore>
 				</p>
 			</div>
 
