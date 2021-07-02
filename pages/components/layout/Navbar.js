@@ -94,30 +94,14 @@ const Header = () => {
 							<AiOutlineCaretDown className="" />
 						</div>
 						<ul class="dropdown-menu absolute hidden text-gray-700 text-sm right-7 border border-gray-300 rounded-lg shadow-xl">
-							<li class="">
-								<Link
-									className="rounded-t-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									href="/profile"
-								>
-									Profile
-								</Link>
+							<li className="rounded-t-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap">
+								<Link href="/profile">Profile</Link>
 							</li>
-							<li class="">
-								<Link
-									className="bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									href="/"
-								>
-									Logout
-								</Link>
+							<li className="bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap">
+								<Link href="/">Logout</Link>
 							</li>
-							<li class="">
-								<Link
-									className="rounded-b-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									href="/register"
-									onClick={() => router.push("/register")}
-								>
-									Register
-								</Link>
+							<li className="rounded-b-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap">
+								<Link href="/register">Register</Link>
 							</li>
 						</ul>
 					</div>
@@ -126,43 +110,42 @@ const Header = () => {
 
 			<div className="shadow-top overflow-hidden bg-dc-gray filter w-full px-4 py-2 flex items-center justify-between space-x-3 sm:space-x-10 fixed bottom-0 sm:hidden text-xl">
 				<Link href="/posts">
-					<div
+					<span
 						className={
 							router.pathname == "/posts" ? `NavLinkActive` : `navLink`
 						}
-						onClick={() => router.push("/posts")}
 					>
 						<AiFillHome className="" />
-					</div>
+					</span>
 				</Link>
 
 				<Link href="/search">
-					<div
+					<span
 						className={
 							router.pathname == "/search" ? `NavLinkActive` : `navLink`
 						}
 					>
 						<FiSearch className="" />
-					</div>
+					</span>
 				</Link>
 
 				<Link href="/upload">
-					<div
+					<span
 						className={
 							router.pathname == "/upload" ? `NavLinkActive` : `navLink`
 						}
 					>
 						<FiPlus className="" />
-					</div>
+					</span>
 				</Link>
 
-				<div
+				<span
 					className={
 						router.pathname == "/activities" ? `NavLinkActive` : `navLink`
 					}
 				>
 					<BsHeart className="" />
-				</div>
+				</span>
 
 				<Link href="/profile">
 					<div className="w-[52px] h-[52px] rounded-2xl cursor-pointer flex items-center justify-center overflow-hidden">
