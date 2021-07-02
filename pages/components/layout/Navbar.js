@@ -27,24 +27,24 @@ const Header = () => {
 
 				<div className="space-x-4 sm:space-x-6 hidden sm:flex text-xl">
 					<Link to="/">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 							<AiFillHome className="" />
 						</div>
 					</Link>
 
 					<Link to="/search">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 							<FiSearch className="" />
 						</div>
 					</Link>
 
 					<Link to="/upload">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 							<FiPlus className="" />
 						</div>
 					</Link>
 
-					<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+					<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 						<BsHeart className="" />
 					</div>
 
@@ -90,7 +90,7 @@ const Header = () => {
 
 				<div className="flex space-x-4 sm:hidden">
 					<div className="dropdown realtive">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 							<AiOutlineCaretDown className="" />
 						</div>
 						<ul class="dropdown-menu absolute hidden text-gray-700 text-sm right-7 border border-gray-300 rounded-lg shadow-xl">
@@ -126,24 +126,24 @@ const Header = () => {
 
 			<div className="shadow-top overflow-hidden bg-dc-gray filter w-full px-4 py-2 flex items-center justify-between space-x-3 sm:space-x-10 fixed bottom-0 sm:hidden text-xl">
 				<Link to="/">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 						<AiFillHome className="" />
 					</div>
 				</Link>
 
 				<Link to="/search">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 						<FiSearch className="" />
 					</div>
 				</Link>
 
 				<Link to="/upload">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100 shadow-2xl hover:shadow-md">
 						<FiPlus className="" />
 					</div>
 				</Link>
 
-				<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer">
+				<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
 					<BsHeart className="" />
 				</div>
 
