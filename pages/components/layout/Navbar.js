@@ -7,14 +7,14 @@ import Image from "next/image";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import { FiSearch, FiPlus } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 const Header = () => {
 	const router = useRouter();
 	return (
 		<div className="sticky top-0 z-50">
 			<div className="bg-dc-gray w-full px-4 py-3 sm:px-10 sm:py-3 flex items-center justify-between space-x-2 sm:space-x-0 border-b border-gray-100">
-				<Link to="/" onClick={() => router.push("/")}>
+				<Link href="/">
 					<Image
 						src={Logo}
 						width={48}
@@ -26,25 +26,41 @@ const Header = () => {
 				</Link>
 
 				<div className="space-x-4 sm:space-x-6 hidden sm:flex text-xl">
-					<Link to="/">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+					<Link href="/posts">
+						<div
+							className={
+								router.pathname == "/posts" ? `NavLinkActive` : `navLink`
+							}
+						>
 							<AiFillHome className="" />
 						</div>
 					</Link>
 
-					<Link to="/search">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+					<Link href="/search">
+						<div
+							className={
+								router.pathname == "/search" ? `NavLinkActive` : `navLink`
+							}
+						>
 							<FiSearch className="" />
 						</div>
 					</Link>
 
-					<Link to="/upload">
-						<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+					<Link href="/upload">
+						<div
+							className={
+								router.pathname == "/upload" ? `NavLinkActive` : `navLink`
+							}
+						>
 							<FiPlus className="" />
 						</div>
 					</Link>
 
-					<div className="p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+					<div
+						className={
+							router.pathname == "/activities" ? `NavLinkActive` : `navLink`
+						}
+					>
 						<BsHeart className="" />
 					</div>
 
@@ -59,30 +75,14 @@ const Header = () => {
 							/>
 						</div>
 						<ul class="dropdown-menu absolute hidden text-gray-700 text-sm right-10 border shadow-xl border-gray-300 rounded-lg">
-							<li class="">
-								<Link
-									className="rounded-t-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/profile"
-								>
-									Profile
-								</Link>
+							<li className="rounded-t-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap text-center">
+								<Link href="/profile">Profile</Link>
 							</li>
-							<li class="">
-								<Link
-									className="bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/profile"
-								>
-									Logout
-								</Link>
+							<li className="bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap text-center">
+								<Link href="/profile">Logout</Link>
 							</li>
-							<li class="">
-								<Link
-									className="rounded-b-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/register"
-									onClick={() => router.push("/register")}
-								>
-									Register
-								</Link>
+							<li className="rounded-b-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap text-center">
+								<Link href="/register">Register</Link>
 							</li>
 						</ul>
 					</div>
@@ -97,7 +97,7 @@ const Header = () => {
 							<li class="">
 								<Link
 									className="rounded-t-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/profile"
+									href="/profile"
 								>
 									Profile
 								</Link>
@@ -105,7 +105,7 @@ const Header = () => {
 							<li class="">
 								<Link
 									className="bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/"
+									href="/"
 								>
 									Logout
 								</Link>
@@ -113,7 +113,7 @@ const Header = () => {
 							<li class="">
 								<Link
 									className="rounded-b-lg bg-white hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer py-2 px-4 block whitespace-no-wrap"
-									to="/register"
+									href="/register"
 									onClick={() => router.push("/register")}
 								>
 									Register
@@ -125,29 +125,46 @@ const Header = () => {
 			</div>
 
 			<div className="shadow-top overflow-hidden bg-dc-gray filter w-full px-4 py-2 flex items-center justify-between space-x-3 sm:space-x-10 fixed bottom-0 sm:hidden text-xl">
-				<Link to="/">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+				<Link href="/posts">
+					<div
+						className={
+							router.pathname == "/posts" ? `NavLinkActive` : `navLink`
+						}
+						onClick={() => router.push("/posts")}
+					>
 						<AiFillHome className="" />
 					</div>
 				</Link>
 
-				<Link to="/search">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+				<Link href="/search">
+					<div
+						className={
+							router.pathname == "/search" ? `NavLinkActive` : `navLink`
+						}
+					>
 						<FiSearch className="" />
 					</div>
 				</Link>
 
-				<Link to="/upload">
-					<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100 shadow-2xl hover:shadow-md">
+				<Link href="/upload">
+					<div
+						className={
+							router.pathname == "/upload" ? `NavLinkActive` : `navLink`
+						}
+					>
 						<FiPlus className="" />
 					</div>
 				</Link>
 
-				<div className="p-4 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100">
+				<div
+					className={
+						router.pathname == "/activities" ? `NavLinkActive` : `navLink`
+					}
+				>
 					<BsHeart className="" />
 				</div>
 
-				<Link to="/profile">
+				<Link href="/profile">
 					<div className="w-[52px] h-[52px] rounded-2xl cursor-pointer flex items-center justify-center overflow-hidden">
 						<Image
 							src={Profile}

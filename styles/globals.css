@@ -29,6 +29,9 @@ body {
 	.btn {
 		@apply bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base xl:text-lg px-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out;
 	}
+	.btn-white {
+		@apply bg-white text-dc-blue hover:bg-dc-blue hover:text-white text-sm md:text-sm lg:text-base xl:text-lg px-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all border border-transparent hover:border-white duration-200 ease-in-out cursor-pointer;
+	}
 
 	.homeBanner {
 		background-image: url("/homebanner.jpg");
@@ -36,12 +39,12 @@ body {
 		@apply w-full h-full relative bg-cover;
 	}
 
-	.active {
-		@apply bg-white shadow-sm;
+	.navLink {
+		@apply p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100;
 	}
 
-	.navLink {
-		@apply px-3 py-2 rounded-lg border border-transparent hover:bg-white hover:shadow-md cursor-pointer;
+	.NavLinkActive {
+		@apply bg-dc-blue text-white p-3.5 rounded-xl  border border-gray-100;
 	}
 
 	.hide-scrollbar::-webkit-scrollbar {
