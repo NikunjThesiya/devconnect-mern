@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Profile from "../../images/profile.jpg";
+import ReactReadMoreReadLess from "react-read-more-read-less";
 import { BsHeart, BsBookmark, BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegComment } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -8,31 +9,8 @@ import { useRouter } from "next/router";
 import PostComment from "./PostComment";
 import Image from "next/image";
 
-const ReadMore = ({ description }) => {
-	const router = useRouter();
-	const text = description;
-	const [isReadMore, setIsReadMore] = useState(true);
-	const toggleReadMore = () => {
-		setIsReadMore(!isReadMore);
-	};
-	return (
-		<span className="text w-11/12">
-			{isReadMore ? text?.slice(0, 150) : text}
-			<span
-				onClick={toggleReadMore}
-				className="read-or-hide text-blue-500 hover:underline cursor-pointer"
-			>
-				{text.length >= 100
-					? isReadMore
-						? "...read more"
-						: " show less"
-					: null}
-			</span>
-		</span>
-	);
-};
-
 const Post = ({ profile, image, description, likes, comments }) => {
+	const router = useRouter();
 	const [showModal, setShowModal] = useState(false);
 	return (
 		<div className="sm:w-[500px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7 ">
@@ -77,9 +55,15 @@ const Post = ({ profile, image, description, likes, comments }) => {
 			</div>
 
 			<div className="flex items-start justify-start my-4 sm:my-5">
-				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-2">
-					<span className="font-semibold truncate">{profile}</span>
-					<ReadMore description={description} />
+				<p className="text-xs sm:text-sm  text-gray-600 text-left space-x-3">
+					<span className="font-semibold truncate">{profile}</span>{" "}
+					<ReactReadMoreReadLess
+						charLimit={150}
+						readMoreText={"Read more ▼"}
+						readLessText={"Read less ▲"}
+					>
+						{description}
+					</ReactReadMoreReadLess>
 				</p>
 			</div>
 

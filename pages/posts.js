@@ -27,7 +27,7 @@ function Posts() {
 			<Post
 				profile="Milan Thesiya"
 				image="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-				description="If you scroll down the page at this point, nothing seems to have changed. Although the utility classes are at work, we need to adjust the background-opacity of the navbar for them to be revealed."
+				description="Adding a slight bottom-border allows the harsh color to contrast the blurry background of the navbar, visually identifying the end of the element. It’s subtle, but adds a whole new layer to the overall presentation."
 				likes="1038"
 				comments="53"
 			/>
