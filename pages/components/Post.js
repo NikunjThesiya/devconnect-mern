@@ -84,7 +84,7 @@ const Post = ({ profile, image, description, likes, comments }) => {
 				</p>
 			</div>
 
-			<div className="flex items-center justify-between text-xl sm:text-2xl mt-5">
+			<div className="flex items-center justify-between text-xl sm:text-2xl mt-5 mb-3">
 				<div className="flex items-center space-x-5">
 					<div className="flex items-center space-x-2 rounded-full bg-white text-gray-600 shadow-xl py-2 px-3 cursor-pointer sm:px-4">
 						<BsHeart className="" />
