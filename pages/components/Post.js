@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Profile from "../../images/profile.jpg";
-
 import { BsHeart, BsBookmark, BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegComment } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -18,7 +17,7 @@ const ReadMore = ({ description }) => {
 	};
 	return (
 		<span className="text w-11/12">
-			{isReadMore ? text.slice(0, 150) : text}
+			{isReadMore ? text?.slice(0, 150) : text}
 			<span
 				onClick={toggleReadMore}
 				className="read-or-hide text-blue-500 hover:underline cursor-pointer"
