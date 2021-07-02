@@ -13,7 +13,7 @@ const Header = () => {
 	const router = useRouter();
 	return (
 		<div className="sticky top-0 z-50">
-			<div className="bg-dc-gray w-full px-4 py-3 sm:px-10 sm:py-3 flex items-center justify-between space-x-2 sm:space-x-0 border-b border-gray-100">
+			<div className="bg-dc-gray w-full px-4 py-3 sm:px-10 sm:py-3 flex items-center justify-between space-x-2 sm:space-x-0 border-b border-gray-100 backdrop-filter backdrop-blur-lg bg-opacity-90">
 				<Link href="/">
 					<Image
 						src={Logo}
@@ -108,7 +108,7 @@ const Header = () => {
 				</div>
 			</div>
 
-			<div className="shadow-top overflow-hidden bg-dc-gray filter w-full px-4 py-2 flex items-center justify-between space-x-3 sm:space-x-10 fixed bottom-0 sm:hidden text-xl">
+			<div className="shadow-top overflow-hidden bg-dc-gray filter w-full px-4 py-2 flex items-center justify-between space-x-3 sm:space-x-10 fixed bottom-0 sm:hidden text-xl backdrop-filter backdrop-blur-lg bg-opacity-90">
 				<Link href="/posts">
 					<span
 						className={
