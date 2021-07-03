@@ -1,21 +1,32 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import UserCard from "./components/UserCard";
-import profile from "../images/profile.jpg";
-import profile2 from "../images/register.jpeg";
+import UserCard from "../components/UserCard";
+import profile from "../../images/profile.jpg";
+import profile2 from "../../images/register.jpeg";
+import Head from "next/head";
 
 const Search = () => {
 	const [searchValue, setSearchValue] = useState("");
 
 	return (
 		<div className="mb-24">
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta charSet="utf-8" />
+				<meta
+					name="description"
+					content="DevConnect is a social network for Programmers or Developers. You can build your profile or portfolio. You can upload post and connect with other Programmers."
+				/>
+				<title>Search Users</title>
+				<link rel="icon" href="./logo.svg" />
+			</Head>
 			<div className="flex flex-col items-center">
 				<div className="mt-5 w-5/6 md:w-3/4 flex flex-col">
 					<div className="flex items-center px-3 py-2 sm:py-0 sm:px-5 my-5 space-x-4 hover:shadow-inner text-sm md:text-xl bg-gray-100 rounded-xl sm:rounded-2xl text-gray-500">
 						<FiSearch className="text-lg" />
 						<input
 							type="text"
-							placeholder="Search"
+							placeholder="Search Users"
 							className="bg-transparent w-full focus:outline-none text-xs sm:text-sm md:text-base py-2 sm:py-4"
 							value={searchValue}
 							onChange={(e) => setSearchValue(e.target.value)}

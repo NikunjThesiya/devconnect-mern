@@ -13,16 +13,15 @@ function ReadMore({ children }) {
 	const classes = useStyles();
 	const [isHidden, setIsHidden] = useState(true);
 	return (
-		<>
-			<div className={isHidden ? classes.hidden : null}>{children}</div>
+		<p>
+			<p className={isHidden ? classes.hidden : null}>{children}</p>
 			<p
-				size="small"
 				className="text-dc-blue underline cursor-pointer"
 				onClick={() => setIsHidden(!isHidden)}
 			>
 				{isHidden ? "Read More ⬇" : "Read Less ⬆"}
 			</p>
-		</>
+		</p>
 	);
 }
 

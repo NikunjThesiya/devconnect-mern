@@ -20,7 +20,7 @@ const PostComment = () => {
 					ll_nikunj.thesiya_ll
 				</h4>
 
-				<p className="text-left text-xs sm:text-sm mt-1">
+				<div className="text-left text-xs sm:text-sm mt-1">
 					<ReadMore>
 						A Computer Science portal for geeks. It contains well written, well
 						thought and well explained computer science, programming articles
@@ -30,7 +30,7 @@ const PostComment = () => {
 						Webinars by Industry Experts, Internship opportunities, and Job
 						Opportunities. Knowledge is power!
 					</ReadMore>
-				</p>
+				</div>
 
 				<p className="text-left text-xs mt-2 text-gray-500 ">2 hours ago..</p>
 			</div>

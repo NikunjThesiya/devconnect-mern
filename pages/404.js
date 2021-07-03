@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { BsArrowLeft } from "react-icons/bs";
 
 function NotFound() {
+	const router = useRouter();
+
 	return (
 		<div className="w-full h-screen bg-gradient-to-r from-dc-purple to-dc-blue flex flex-col items-center justify-center justify-items-center text-white">
 			<Head>
@@ -21,12 +23,12 @@ function NotFound() {
 			<h3 className="text-xl md:text-2xl lg:text-3xl font-light">
 				Oops! Page Not Found.
 			</h3>
-			<Link href="/posts">
+			<span onClick={() => router.push("/posts")}>
 				<span className="flex items-center space-x-2 btn-white my-8">
 					<BsArrowLeft className="text-base md:text-xl lg:text-2xl" />
 					<span>Go to Home</span>
 				</span>
-			</Link>
+			</span>
 		</div>
 	);
 }

@@ -1,5 +1,7 @@
 import Head from "next/head";
-import Post from "./components/Post";
+import dynamic from "next/dynamic";
+
+const Post = dynamic(() => import("./components/Post"));
 
 function Posts() {
 	return (

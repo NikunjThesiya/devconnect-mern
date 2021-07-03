@@ -7,7 +7,10 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
 import PostComment from "./PostComment";
 import Image from "next/image";
-import ReadMore from "./ReadMore";
+// import ReadMore from "./ReadMore";
+import dynamic from "next/dynamic";
+
+const ReadMore = dynamic(() => import("./ReadMore"));
 
 const Post = ({ profile, image, description, likes, comments }) => {
 	const router = useRouter();
@@ -34,8 +37,8 @@ const Post = ({ profile, image, description, likes, comments }) => {
 					<div className="bg-white rounded-full p-2 shadow-xl text-gray-600 cursor-pointer hover:shadow-none">
 						<BsThreeDotsVertical className="text-lg" />
 					</div>
-					<ul class="dropdown-menu absolute hidden text-gray-700 text-xs sm:text-sm border border-gray-300 shadow-lg rounded-lg">
-						<li class="">
+					<ul className="dropdown-menu absolute hidden text-gray-700 text-xs sm:text-sm border border-gray-300 shadow-lg rounded-lg">
+						<li className="">
 							<span
 								className="rounded-md bg-white hover:bg-dc-blue hover:text-white py-2 sm:py-2 px-2 sm:px-4 block whitespace-no-wrap cursor-pointer"
 								to="/"
@@ -54,10 +57,8 @@ const Post = ({ profile, image, description, likes, comments }) => {
 				/>
 			</div>
 
-			<div className="flex items-start justify-start my-4 sm:my-5">
-				<p className="text-xs sm:text-sm  text-gray-600 text-left">
-					<ReadMore>{description}</ReadMore>
-				</p>
+			<div className="flex flex-col items-start justify-start my-4 sm:my-5 text-xs sm:text-sm  text-gray-600 text-left">
+				<ReadMore>{description}</ReadMore>
 			</div>
 
 			<div className="flex items-center justify-between text-xl sm:text-2xl mt-5 mb-3">
