@@ -7,8 +7,8 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
 import PostComment from "./PostComment";
 import Image from "next/image";
-// import ReadMore from "./ReadMore";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 const ReadMore = dynamic(() => import("./ReadMore"));
 
@@ -77,7 +77,11 @@ const Post = ({ profile, image, description, likes, comments }) => {
 					{showModal ? (
 						<div className="bg-white">
 							<div className="justify-center bg-dc-gray bg-opacity-40 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none shadow-xl backdrop-filter backdrop-blur-md">
-								<div className="relative w-auto my-6 mx-auto max-w-3xl">
+								<motion.div
+									className="relative w-auto my-6 mx-auto max-w-3xl"
+									initial={{ scale: 0 }}
+									animate={{ scale: 1 }}
+								>
 									{/*content*/}
 									<div className="border-0 rounded-3xl  relative flex flex-col w-80 sm:w-96 md:w-96 lg:w-full bg-white outline-none focus:outline-none shadow-xl">
 										{/*header*/}
@@ -115,7 +119,7 @@ const Post = ({ profile, image, description, likes, comments }) => {
 											</button>
 										</form>
 									</div>
-								</div>
+								</motion.div>
 							</div>
 							<div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
 						</div>

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import RegisterImg from "../images/register.jpeg";
+import { motion } from "framer-motion";
 
 function Register() {
 	const router = useRouter();
@@ -17,15 +18,23 @@ function Register() {
 				<title>Register</title>
 				<link rel="icon" href="./logo.svg" />
 			</Head>
-			<div className="w-1/2 p-12 hidden lg:flex items-center justify-center bg-dc-gray">
+			<motion.div
+				className="w-1/2 p-12 hidden lg:flex items-center justify-center bg-dc-gray"
+				initial={{ x: "100vh" }}
+				animate={{ x: 0 }}
+			>
 				<Image
 					src={RegisterImg}
 					width={1000}
 					height={1000}
 					className="object-cover rounded-3xl"
 				/>
-			</div>
-			<div className="flex flex-col items-start w-full lg:w-1/2 bg-white rounded-2xl p-10 sm:px-12 sm:py-12 border border-transparent text-sm sm:text-base">
+			</motion.div>
+			<motion.div
+				className="flex flex-col items-start w-full lg:w-1/2 bg-white rounded-2xl p-10 sm:px-12 sm:py-12 border border-transparent text-sm sm:text-base"
+				initial={{ x: "-100vh" }}
+				animate={{ x: 0 }}
+			>
 				<h2 className="text-dc-blue text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
 					Sign Up
 				</h2>
@@ -90,7 +99,7 @@ function Register() {
 						Sign In
 					</span>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

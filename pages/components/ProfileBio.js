@@ -4,7 +4,7 @@ import ScrollContainer from "react-indiana-drag-scroll";
 
 const ProfileBio = () => {
 	return (
-		<div className="flex items-center my-2 sm:my-4 p-4 sm:p-7 space-x-5 sm:space-x-8 md:space-x-10 lg:space-x-11 overflow-hidden">
+		<div className="flex md:w-full flex-col md:flex-row items-center my-2 sm:my-4 px-4 sm:px-10 py-2 sm:py-4 justify-center space-x-5 sm:space-x-8 md:space-x-10 lg:space-x-11 overflow-hidden">
 			<div className="rounded-3xl sm:rounded-3xl bg-gray-100 p-3 sm:p-4 overflow-hidden flex-grow-0 h-28 w-28 sm:h-40 sm:w-40 lg:w-52 lg:h-52 md:w-52 md:h-52">
 				<Image
 					src={Profile}
@@ -16,13 +16,13 @@ const ProfileBio = () => {
 					objectFit="cover"
 				/>
 			</div>
-			<div className="flex flex-col p-2 sm:p-4 space-y-0 sm:space-y-3 md:space-y-3 self-start">
-				<div className="flex w-96 items-center space-x-5 whitespace-nowrap">
+			<div className="flex flex-col p-2 sm:p-4 space-y-0 sm:space-y-3 md:space-y-3 self-start items-center md:items-start">
+				<div className="flex items-center md:w-96 space-x-5 whitespace-nowrap">
 					<ScrollContainer className="text-lg sm:text-xl md:text-2xl text-gray-600 whitespace-nowrap cursor-pointer overflow-scroll hide-scrollbar font-semibold">
 						Nikunj Thesiya Nikunj Thesiya Nikunj Thesiya Nikunj Thesiya
 					</ScrollContainer>
 
-					<button className="hidden sm:inline sm:p-2 text-xs bg-dc-blue rounded-lg text-white focus:outline-none">
+					<button className="hidden md:inline sm:p-2 text-xs bg-dc-blue rounded-lg text-white focus:outline-none">
 						Edit Profile
 					</button>
 				</div>

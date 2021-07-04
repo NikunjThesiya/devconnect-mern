@@ -40,7 +40,7 @@ body {
 	}
 
 	.navLink {
-		@apply p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100;
+		@apply p-3.5 bg-white rounded-xl text-gray-500 hover:bg-dc-blue hover:text-white transition duration-200 ease-in-out cursor-pointer border border-gray-100 hover:border-dc-blue;
 	}
 
 	.NavLinkActive {
