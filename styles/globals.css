@@ -30,7 +30,7 @@ body {
 		@apply bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base xl:text-lg px-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out cursor-pointer;
 	}
 	.btn-sm {
-		@apply bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base px-4 py-3 sm:px-5 sm:py-3 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out cursor-pointer;
+		@apply bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base px-6 py-3 sm:px-8 sm:py-3 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out cursor-pointer;
 	}
 	.btn-white {
 		@apply bg-white text-dc-blue hover:bg-dc-blue hover:text-white text-sm md:text-sm lg:text-base xl:text-lg px-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all border border-transparent hover:border-white duration-200 ease-in-out cursor-pointer;

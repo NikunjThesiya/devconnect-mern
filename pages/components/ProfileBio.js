@@ -26,6 +26,16 @@ const ProfileBio = () => {
 					From Gujarat, India
 				</h1>
 			</div>
+			<div className="flex items-center mt-5 space-x-4">
+				<div className="flex flex-col rounded-2xl text-gray-500 bg-dc-gray py-4 px-6 items-center text-center border border-transparent hover:border-dc-blue hover:border-opacity-10 cursor-pointer">
+					<h1 className="text-lg sm:text-xl font-bold">956</h1>
+					<h1 className="text-sm md:text-lg">Followers</h1>
+				</div>
+				<div className="flex flex-col rounded-2xl text-gray-500 bg-dc-gray py-4 px-6 items-center text-center border border-transparent hover:border-dc-blue hover:border-opacity-10 cursor-pointer">
+					<h1 className="text-lg sm:text-xl font-bold">203</h1>
+					<h1 className="text-sm md:text-lg">Following</h1>
+				</div>
+			</div>
 			<span className="btn-sm mt-5">Follow</span>
 
 			<div className="w-full flex flex-col items-start mt-8 space-y-4">
