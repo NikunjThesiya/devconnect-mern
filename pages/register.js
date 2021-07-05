@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Register() {
 	const router = useRouter();
 	return (
-		<div className="w-full flex relative">
+		<div className="w-full flex relative overflow-hidden">
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
@@ -20,7 +20,7 @@ function Register() {
 			</Head>
 			<motion.div
 				className="w-1/2 p-12 hidden lg:flex items-center justify-center bg-dc-gray"
-				initial={{ x: "100vh" }}
+				initial={{ x: "100vw" }}
 				animate={{ x: 0 }}
 			>
 				<Image
@@ -32,7 +32,7 @@ function Register() {
 			</motion.div>
 			<motion.div
 				className="flex flex-col items-start w-full lg:w-1/2 bg-white rounded-2xl p-10 sm:px-12 sm:py-12 border border-transparent text-sm sm:text-base"
-				initial={{ x: "-100vh" }}
+				initial={{ x: "-100vw" }}
 				animate={{ x: 0 }}
 			>
 				<h2 className="text-dc-blue text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
