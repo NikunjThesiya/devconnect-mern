@@ -8,6 +8,8 @@ import Head from "next/head";
 
 const Profile = () => {
 	return (
+        <div className="w-full flex flex-col items-center">
+
 		<div className="flex w-10/12 flex-col items-center justify-center mt-4 mb-24">
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -289,6 +291,7 @@ const Profile = () => {
 				</div>
 			</div>
 		</div>
+                    </div>
 	);
 };
 
