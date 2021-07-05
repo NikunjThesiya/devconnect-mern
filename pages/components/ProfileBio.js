@@ -26,7 +26,7 @@ const ProfileBio = () => {
 					From Gujarat, India
 				</h1>
 			</div>
-			<span className="btn-sm mt-5">Edit Profile</span>
+			<span className="btn-sm mt-5">Follow</span>
 
 			<div className="w-full flex flex-col items-start mt-8 space-y-4">
 				<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">
@@ -44,7 +44,7 @@ const ProfileBio = () => {
 			</div>
 			<div className="w-full flex flex-col items-start mt-8 space-y-4">
 				<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">Skills</h3>
-				<div className="w-full flex px-6 py-5 md:px-8 md:py-6 rounded-2xl bg-dc-gray  text-gray-700 hover:border-dc-blue border border-transparent hover:border-opacity-5 cursor-pointer text-xs md:text-base">
+				<div className="w-full flex px-6 py-5 md:px-8 md:py-6 rounded-2xl bg-dc-gray  text-gray-700 hover:border-dc-blue border border-transparent hover:border-opacity-5 cursor-pointer text-sm md:text-base">
 					<ScrollContainer className="w-full flex items-center space-x-4">
 						<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
 							ReactJS
