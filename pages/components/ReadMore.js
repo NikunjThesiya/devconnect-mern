@@ -19,7 +19,7 @@ function ReadMore({ children }) {
 				className="text-dc-blue underline cursor-pointer"
 				onClick={() => setIsHidden(!isHidden)}
 			>
-				{isHidden ? "Read More ⬇" : "Read Less ⬆"}
+				{isHidden ? "Read More" : "Read Less"}
 			</p>
 		</p>
 	);
