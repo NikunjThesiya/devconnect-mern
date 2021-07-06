@@ -12,7 +12,7 @@ function User() {
 					content="DevConnect is a social network for Programmers or Developers. You can build your profile or portfolio. You can upload post and connect with other Programmers."
 				/>
 				<title>Nikunj Thesiya</title>
-				<link rel="icon" href="./logo.svg" />
+				<link rel="icon" href="./../logo.svg" />
 			</Head>
 			<ProfileBio />
 		</div>

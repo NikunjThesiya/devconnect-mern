@@ -1,14 +1,16 @@
 import Image from "next/image";
 import ProfileImg from "../images/profile.jpg";
-import ScrollContainer from "react-indiana-drag-scroll";
 import Github from "../images/github.svg";
 import Instagram from "../images/instagram.svg";
 import Facebook from "../images/facebook.svg";
 import Twitter from "../images/twitter.svg";
 import LinkedIn from "../images/linkedin.svg";
-import { AiOutlineStar, AiOutlineEye } from "react-icons/ai";
-import { VscRepoForked } from "react-icons/vsc";
 import Head from "next/head";
+import Introduction from "./components/Introduction";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import GithubRepo from "./components/GithubRepo";
 
 const Profile = () => {
 	return (
@@ -112,248 +114,11 @@ const Profile = () => {
 				</div>
 				<span className="btn-sm mt-5">Edit Profile</span>
 
-				<div className="w-full flex flex-col items-start mt-10 space-y-8">
-					<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">
-						Introduction
-					</h3>
-					<p className="w-full text-base text-justify md:text-lg rounded-2xl bg-dc-gray px-8 py-6 text-gray-500 hover:border-dc-blue border border-transparent hover:border-opacity-5">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-				<div className="w-full flex flex-col items-start mt-10 space-y-8">
-					<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">
-						Skills
-					</h3>
-					<div className="w-full flex px-6 py-5 md:px-8 md:py-6 rounded-2xl bg-dc-gray  text-gray-700 hover:border-dc-blue border border-transparent hover:border-opacity-5 cursor-pointer text-sm md:text-base">
-						<ScrollContainer className="w-full flex items-center space-x-4">
-							<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
-								ReactJS
-							</span>
-							<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
-								NodeJS
-							</span>
-							<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
-								JavaScript
-							</span>
-							<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
-								TailwindCSS
-							</span>
-							<span className="bg-dc-blue text-white px-3 py-1.5 bg-opacity-50 rounded-lg whitespace-nowrap">
-								Figma
-							</span>
-						</ScrollContainer>
-					</div>
-				</div>
-
-				{/* Experience */}
-
-				<div className="w-full flex flex-col items-start mt-10 space-y-8">
-					<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">
-						Experience
-					</h3>
-					<div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">Microsoft</h4>
-							<h6 className="text-base md:text-lg font-medium">
-								Oct 2018 - Current
-							</h6>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Position
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									Front End Developer
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam
-								</span>
-							</h5>
-						</div>
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">Wipro</h4>
-							<h6 className="text-base md:text-lg font-medium">2015 - 2018</h6>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Position
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									UI Designer
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore.
-								</span>
-							</h5>
-						</div>
-					</div>
-				</div>
-
-				{/* Education */}
-
-				<div className="w-full flex flex-col items-start mt-10 space-y-8">
-					<h3 className="text-2xl md:text-3xl text-dc-blue font-bold">
-						Education
-					</h3>
-					<div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">
-								Veer Narmad South Gujarat University
-							</h4>
-							<h6 className="text-base md:text-lg font-medium">
-								July 2017 - Mar 2020
-							</h6>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Degree
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									Bachelors
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Field of Study
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									Computer Science
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam
-								</span>
-							</h5>
-						</div>
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">
-								Parul University
-							</h4>
-							<h6 className="text-base md:text-lg font-medium">
-								Aug 2020 - Mar 2022
-							</h6>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Degree
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									Masters
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Field of Study
-								</span>
-								<span className="text-base md:text-lg font-medium">
-									Computer Science
-								</span>
-							</h5>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam
-								</span>
-							</h5>
-						</div>
-					</div>
-				</div>
-
-				{/* Github Repo */}
-				<div className="w-full flex flex-col items-start mt-10 space-y-8">
-					<h3 className="text-xl flex items-center space-x-4 md:text-3xl text-dc-blue font-bold">
-						<Image
-							src={Github}
-							className="object-cover rounded-3xl"
-							width={40}
-							height={40}
-							quality={100}
-							objectFit="cover"
-						/>
-						<span>Github Repositories</span>
-					</h3>
-					<div className="w-full grid grid-cols-1 gap-6">
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">Amazone Clone</h4>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam
-								</span>
-							</h5>
-							<div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3 items-center">
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<AiOutlineStar className="text-lg" />
-									<span>Stars : 107</span>
-								</p>
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<AiOutlineEye className="text-lg" />
-									<span>Views : 218</span>
-								</p>
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<VscRepoForked className="text-lg" />
-									<span>Forks : 80</span>
-								</p>
-							</div>
-						</div>
-						<div className="px-8 py-6 md:px-10 md:py-8 border border-transparent hover:border-opacity-5 cursor-pointer rounded-3xl bg-dc-gray text-gray-500 hover:border-dc-blue flex flex-col space-y-3">
-							<h4 className="font-bold text-xl md:text-2xl">Music Player</h4>
-							<h5 className="flex flex-col space-y-2">
-								<span className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl shadow-md text-sm md:text-base">
-									Description
-								</span>
-								<span className="text-sm md:text-base">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam
-								</span>
-							</h5>
-							<div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3 items-center">
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<AiOutlineStar className="text-lg" />
-									<span>Stars : 107</span>
-								</p>
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<AiOutlineEye className="text-lg" />
-									<span>Views : 218</span>
-								</p>
-								<p className="bg-white px-4 py-2 self-start rounded-lg md:rounded-xl border border-gray-50 text-sm md:text-base flex items-center space-x-1">
-									<VscRepoForked className="text-lg" />
-									<span>Forks : 80</span>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				<Introduction />
+				<Skills />
+				<Experience />
+				<Education />
+				<GithubRepo />
 			</div>
 		</div>
 	);
