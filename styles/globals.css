@@ -22,10 +22,6 @@ body {
 		@apply flex bg-[#F6F8FB] items-center justify-between w-full px-8 sm:px-16 py-5 shadow-lg;
 	}
 
-	.sidebar-link {
-		@apply px-10 rounded-lg py-4 text-lg text-[#5C637C] md:text-sm cursor-pointer hover:bg-white hover:shadow-md transition duration-200 ease-in-out;
-	}
-
 	.btn {
 		@apply bg-gradient-to-r from-dc-purple to-dc-blue hover:from-dc-blue hover:to-dc-purple text-white text-sm md:text-sm lg:text-base xl:text-lg px-5 py-4 sm:px-6 sm:py-5 rounded-xl shadow-2xl hover:shadow-xl focus:outline-none transition-all duration-200 ease-in-out cursor-pointer;
 	}
@@ -40,6 +36,10 @@ body {
 		background-image: url("/homebanner.jpg");
 		background-size: cover;
 		@apply w-full h-full relative bg-cover;
+	}
+
+	.social-link {
+		@apply bg-dc-gray w-12 h-12 md:w-14 md:h-14 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-md border border-gray-200 cursor-pointer hover:shadow-inner;
 	}
 
 	.navLink {
