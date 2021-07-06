@@ -153,7 +153,7 @@ const Profile = () => {
 					</div>
 				)}
 				{postTab && (
-					<div className="w-full flex flex-col items-center justify-items-center justify-center mb-20 mt-6">
+					<div className="w-screen md:w-full flex flex-col items-center justify-items-center justify-center mt-5">
 						<Post
 							profile="Nikunj Thesiya"
 							image="https://images.unsplash.com/photo-1619782087505-e1544bc70e1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=466&q=80"
