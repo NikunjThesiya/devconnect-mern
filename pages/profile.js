@@ -1,10 +1,5 @@
 import Image from "next/image";
 import ProfileImg from "../images/profile.jpg";
-import Github from "../images/github.svg";
-import Instagram from "../images/instagram.svg";
-import Facebook from "../images/facebook.svg";
-import Twitter from "../images/twitter.svg";
-import LinkedIn from "../images/linkedin.svg";
 import Head from "next/head";
 import Introduction from "./components/Introduction";
 import Skills from "./components/Skills";
@@ -13,10 +8,13 @@ import Education from "./components/Education";
 import GithubRepo from "./components/GithubRepo";
 import Post from "./components/Post";
 import { useState } from "react";
+import SocialMedia from "./components/SocialMedia";
+import { useRouter } from "next/router";
 
 const Profile = () => {
 	const [profileTab, setProfileTab] = useState(true);
 	const [postTab, setPostTab] = useState(false);
+	const router = useRouter();
 	return (
 		<div className="w-full flex flex-col items-center">
 			<div className="flex w-10/12 flex-col items-center justify-center mt-4 mb-24">
@@ -52,59 +50,7 @@ const Profile = () => {
 					</h1>
 				</div>
 
-				{/* Social Media */}
-				<div className="flex space-x-4 mt-5">
-					<span className="social-link">
-						<Image
-							src={Facebook}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Instagram}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Twitter}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Github}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={LinkedIn}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-				</div>
+				<SocialMedia />
 
 				<div className="flex items-center mt-5 space-x-4">
 					<div className="flex flex-col rounded-2xl text-gray-500 bg-dc-gray py-4 px-5 md:py-4 md:px-6 items-center text-center border border-transparent hover:border-dc-blue hover:border-opacity-10 cursor-pointer">
@@ -116,7 +62,9 @@ const Profile = () => {
 						<h1 className="text-xs md:text-lg">Following</h1>
 					</div>
 				</div>
-				<span className="btn-sm mt-5">Edit Profile</span>
+				<span className="btn-sm mt-5" onClick={() => router.push("/dashboard")}>
+					Edit Profile
+				</span>
 
 				<div className="mt-16">
 					<div className="flex w-full items-center justify-center justify-items-center">

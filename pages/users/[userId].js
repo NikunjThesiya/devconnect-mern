@@ -13,6 +13,7 @@ import Education from "./../components/Education";
 import GithubRepo from "./../components/GithubRepo";
 import Post from "./../components/Post";
 import { useState } from "react";
+import SocialMedia from "../components/SocialMedia";
 
 function User() {
 	const [profileTab, setProfileTab] = useState(true);
@@ -52,59 +53,7 @@ function User() {
 					</h1>
 				</div>
 
-				{/* Social Media */}
-				<div className="flex space-x-4 mt-5">
-					<span className="social-link">
-						<Image
-							src={Facebook}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Instagram}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Twitter}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={Github}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-					<span className="social-link">
-						<Image
-							src={LinkedIn}
-							className="object-cover"
-							width={30}
-							height={30}
-							quality={100}
-							objectFit="cover"
-						/>
-					</span>
-				</div>
+				<SocialMedia />
 
 				<div className="flex items-center mt-5 space-x-4">
 					<div className="flex flex-col rounded-2xl text-gray-500 bg-dc-gray py-4 px-5 md:py-4 md:px-6 items-center text-center border border-transparent hover:border-dc-blue hover:border-opacity-10 cursor-pointer">
