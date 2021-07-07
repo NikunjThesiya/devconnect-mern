@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { FaRegEdit } from "react-icons/fa";
 import { BsPlus, BsArrowLeft } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
@@ -7,7 +8,11 @@ import { useRouter } from "next/router";
 function Dashbord() {
 	const router = useRouter();
 	return (
-		<div className="flex flex-col items-center w-full p-10 sm:px-12 sm:py-12 mb-16">
+		<motion.div
+			className="flex flex-col items-center w-full p-10 sm:px-12 sm:py-12 mb-16"
+			initial={{ scale: 0.7 }}
+			animate={{ scale: 1 }}
+		>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
@@ -209,7 +214,7 @@ function Dashbord() {
 					<span>Go back to profile</span>
 				</span>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

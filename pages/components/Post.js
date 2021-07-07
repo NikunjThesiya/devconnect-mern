@@ -16,7 +16,11 @@ const Post = ({ profile, image, description, likes, comments }) => {
 	const router = useRouter();
 	const [showModal, setShowModal] = useState(false);
 	return (
-		<div className="sm:w-[500px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7 ">
+		<motion.div
+			className="sm:w-[500px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7"
+			initial={{ scale: 0.5 }}
+			animate={{ scale: 1 }}
+		>
 			<div className="flex items-center justify-between">
 				<div className="flex items-center space-x-3">
 					<div className="rounded-full w-7 h-7 sm:w-9 sm:h-9 overflow-hidden">
@@ -126,7 +130,7 @@ const Post = ({ profile, image, description, likes, comments }) => {
 					) : null}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

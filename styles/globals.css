@@ -33,9 +33,7 @@ body {
 	}
 
 	.homeBanner {
-		background-image: url("/homebanner.jpg");
-		background-size: cover;
-		@apply w-full h-full relative bg-cover;
+		@apply w-full h-full relative;
 	}
 
 	.tab-active {

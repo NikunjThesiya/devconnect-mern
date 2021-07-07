@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import GithubRepo from "./components/GithubRepo";
 import Post from "./components/Post";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import SocialMedia from "./components/SocialMedia";
 import { useRouter } from "next/router";
@@ -17,7 +18,11 @@ const Profile = () => {
 	const [postTab, setPostTab] = useState(false);
 	const router = useRouter();
 	return (
-		<div className="w-full flex flex-col items-center">
+		<motion.div
+			className="w-full flex flex-col items-center"
+			initial={{ scale: 0.7 }}
+			animate={{ scale: 1 }}
+		>
 			<div className="flex w-10/12 flex-col items-center justify-center mt-4 mb-24">
 				<Head>
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,47 +68,61 @@ const Profile = () => {
 						<h1 className="text-xs md:text-lg">Following</h1>
 					</div>
 				</div>
-				<span className="btn-sm mt-5" onClick={() => router.push("/dashboard")}>
+				<motion.span
+					className="btn-sm mt-5"
+					onClick={() => router.push("/dashboard")}
+					whileHover={{ scale: 0.8 }}
+				>
 					Edit Profile
-				</span>
+				</motion.span>
 
 				<div className="mt-16">
 					<div className="flex w-full items-center justify-center justify-items-center">
 						<div className="bg-dc-gray flex space-x-4 rounded-3xl px-6 py-4 md:px-8 md:py-5">
-							<span
+							<motion.span
 								className={profileTab ? "tab-active" : "tab-inactive"}
 								onClick={() => {
 									setPostTab(false);
 									setProfileTab(true);
 								}}
+								whileTap={{ scale: 0.8 }}
 							>
 								Profile
-							</span>
-							<span
+							</motion.span>
+							<motion.span
 								className={postTab ? "tab-active" : "tab-inactive"}
 								onClick={() => {
 									setPostTab(true);
 									setProfileTab(false);
 								}}
+								whileTap={{ scale: 0.8 }}
 							>
 								Posts
-							</span>
+							</motion.span>
 						</div>
 					</div>
 				</div>
 
 				{profileTab && (
-					<div className="flex w-full flex-col items-center justify-center">
+					<motion.div
+						className="flex w-full flex-col items-center justify-center mt-7"
+						initial={{ scale: 0.5 }}
+						animate={{ scale: 1 }}
+					>
 						<Introduction />
 						<Skills />
 						<Experience />
 						<Education />
 						<Certificate />
 						<GithubRepo />
-					</div>
+					</motion.div>
 				)}
 				{postTab && (
-					<div className="w-screen md:w-full flex flex-col items-center justify-items-center justify-center mt-5">
+					<motion.div
+						className="w-screen md:w-full flex flex-col items-center justify-items-center justify-center mt-7"
+						initial={{ scale: 0.5 }}
+						animate={{ scale: 1 }}
+					>
 						<Post
 							profile="Nikunj Thesiya"
 							image="https://images.unsplash.com/photo-1619782087505-e1544bc70e1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=466&q=80"
@@ -118,10 +137,10 @@ const Profile = () => {
 							likes="1038"
 							comments="53"
 						/>
-					</div>
+					</motion.div>
 				)}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

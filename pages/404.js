@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { BsArrowLeft } from "react-icons/bs";
 
@@ -17,18 +18,30 @@ function NotFound() {
 				<title>DevConnect | 404</title>
 				<link rel="icon" href="./logo.svg" />
 			</Head>
-			<h1 className="text-6xl md:text-7xl lg:text-9xl font-bold filter drop-shadow-xl my-4">
+			<motion.h1
+				className="text-6xl md:text-7xl lg:text-9xl font-bold filter drop-shadow-xl my-4"
+				initial={{ scale: 0.5 }}
+				animate={{ scale: 1 }}
+			>
 				404
-			</h1>
-			<h3 className="text-xl md:text-2xl lg:text-3xl font-light">
+			</motion.h1>
+			<motion.h3
+				className="text-xl md:text-2xl lg:text-3xl font-light"
+				initial={{ scale: 0.5 }}
+				animate={{ scale: 1 }}
+			>
 				Oops! Page Not Found.
-			</h3>
-			<span onClick={() => router.push("/posts")}>
+			</motion.h3>
+			<motion.span
+				onClick={() => router.push("/posts")}
+				whileHover={{ scale: 0.9 }}
+				whileTap={{ scale: 0.8 }}
+			>
 				<span className="flex items-center space-x-2 btn-white my-8">
 					<BsArrowLeft className="text-base md:text-xl lg:text-2xl" />
 					<span>Go to Home</span>
 				</span>
-			</span>
+			</motion.span>
 		</div>
 	);
 }

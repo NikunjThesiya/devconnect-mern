@@ -1,11 +1,16 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { BsArrowLeft } from "react-icons/bs";
 import { useRouter } from "next/router";
 
 function AddCertificate() {
 	const router = useRouter();
 	return (
-		<div className="flex flex-col items-center w-full p-10 sm:px-12 sm:py-12 mb-16">
+		<motion.div
+			className="flex flex-col items-center w-full p-10 sm:px-12 sm:py-12 mb-16"
+			initial={{ scale: 0.7 }}
+			animate={{ scale: 1 }}
+		>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
@@ -21,13 +26,13 @@ function AddCertificate() {
 				<h1 className="text-dc-blue font-bold text-3xl lg:text-4xl">
 					Add Certificate
 				</h1>
-				<h1 className="text-gray-500 font-light text-lg md:text-xl lg:text-2xl">
+				<h1 className="text-gray-500 font-light text-sm md:text-xl lg:text-2xl">
 					Add any certificate that you achieve from courses or exams completion.
 				</h1>
 			</div>
 
 			<div className="w-full flex flex-col space-y-2 md:space-y-4 mt-5 md:mt-8">
-				<h1 className="text-red-500 font-light text-base md:text-lg lg:text-xl">
+				<h1 className="text-red-500 font-light text-sm md:text-lg lg:text-xl">
 					* required fields.
 				</h1>
 
@@ -72,7 +77,7 @@ function AddCertificate() {
 					</div>
 				</form>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 
