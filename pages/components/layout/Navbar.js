@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Profile from "../../../images/profile.jpg";
 import { AiFillHome } from "react-icons/ai";
 import Image from "next/image";
-import { AiOutlineCaretDown } from "react-icons/ai";
+import { AiOutlineCaretDown, AiOutlineAppstore } from "react-icons/ai";
 import { FiSearch, FiPlus } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 
@@ -54,11 +54,11 @@ const Header = () => {
 
 					<div
 						className={
-							router.pathname == "/activities" ? `NavLinkActive` : `navLink`
+							router.pathname == "/dashboard" ? `NavLinkActive` : `navLink`
 						}
-						onClick={() => router.push("/activities")}
+						onClick={() => router.push("/dashboard")}
 					>
-						<BsHeart className="" />
+						<AiOutlineAppstore className="" />
 					</div>
 
 					<div className="dropdown realtive">
@@ -141,11 +141,11 @@ const Header = () => {
 
 				<span
 					className={
-						router.pathname == "/activities" ? `NavLinkActive` : `navLink`
+						router.pathname == "/dashboard" ? `NavLinkActive` : `navLink`
 					}
-					onClick={() => router.push("/activities")}
+					onClick={() => router.push("/dashboard")}
 				>
-					<BsHeart className="" />
+					<AiOutlineAppstore className="" />
 				</span>
 
 				<div
