@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { BsArrowLeft } from "react-icons/bs";
 import Github from "../images/github.svg";
 import Instagram from "../images/instagram.svg";
 import Facebook from "../images/facebook.svg";
@@ -100,13 +101,10 @@ function CreateProfile() {
 					</div>
 					<div className="flex flex-col space-y-2">
 						<textarea
-							placeholder="Github Username"
+							placeholder="A short Bio or Introduction of your self."
 							rows="4"
 							className="dc-input"
 						/>
-						<span className="text-xs md:text-sm font-light text-gray-400">
-							A short Bio or Introduction of your self.
-						</span>
 					</div>
 
 					<div className="flex flex-col space-y-4">
@@ -217,16 +215,20 @@ function CreateProfile() {
 						</div>
 					</div>
 
-					<div className="flex w-full space-x-4 items-center justify-end">
-						<button type="submit" className="dashboard-btn-blue self-start">
+					<div className="w-full flex flex-col gap-4 md:flex-row md:justify-end mt-8 md:mt-10">
+						<button
+							type="submit"
+							className="dashboard-btn-blue self-end md:self-start"
+						>
 							Submit
 						</button>
-						<button
-							className="dashboard-btn-white self-start"
-							onClick={() => router.push("/profile")}
+						<span
+							className="dashboard-btn-white md:self-start"
+							onClick={() => router.push("/dashboard")}
 						>
-							Go back
-						</button>
+							<BsArrowLeft className="text-lg" />
+							<span>Go back to dashboard</span>
+						</span>
 					</div>
 				</form>
 			</div>

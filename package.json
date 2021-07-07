@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/line-clamp": "^0.2.1",
     "framer-motion": "^4.1.17",
     "next": "latest",

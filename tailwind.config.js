@@ -16,5 +16,8 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require("@tailwindcss/line-clamp")],
+	plugins: [
+		require("@tailwindcss/custom-forms"),
+		require("@tailwindcss/line-clamp"),
+	],
 };

@@ -14,6 +14,7 @@ import GithubRepo from "./../components/GithubRepo";
 import Post from "./../components/Post";
 import { useState } from "react";
 import SocialMedia from "../components/SocialMedia";
+import Certificate from "../components/Certificate";
 
 function User() {
 	const [profileTab, setProfileTab] = useState(true);
@@ -98,6 +99,7 @@ function User() {
 						<Skills />
 						<Experience />
 						<Education />
+						<Certificate />
 						<GithubRepo />
 					</div>
 				)}

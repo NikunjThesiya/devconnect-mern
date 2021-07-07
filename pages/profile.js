@@ -10,6 +10,7 @@ import Post from "./components/Post";
 import { useState } from "react";
 import SocialMedia from "./components/SocialMedia";
 import { useRouter } from "next/router";
+import Certificate from "./components/Certificate";
 
 const Profile = () => {
 	const [profileTab, setProfileTab] = useState(true);
@@ -97,6 +98,7 @@ const Profile = () => {
 						<Skills />
 						<Experience />
 						<Education />
+						<Certificate />
 						<GithubRepo />
 					</div>
 				)}

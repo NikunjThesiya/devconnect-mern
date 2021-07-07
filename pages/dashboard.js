@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FaRegEdit } from "react-icons/fa";
-import { BsPlus } from "react-icons/bs";
+import { BsPlus, BsArrowLeft } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { useRouter } from "next/router";
 
@@ -35,15 +35,24 @@ function Dashbord() {
 					<FaRegEdit className="text-xl" />
 					<span>Edit Profile</span>
 				</div>
-				<div className="dashboard-btn-white">
+				<div
+					className="dashboard-btn-white"
+					onClick={() => router.push("/add-experience")}
+				>
 					<BsPlus className="text-xl" />
 					<span>Add Experience</span>
 				</div>
-				<div className="dashboard-btn-white">
+				<div
+					className="dashboard-btn-white"
+					onClick={() => router.push("/add-education")}
+				>
 					<BsPlus className="text-xl" />
 					<span>Add Education</span>
 				</div>
-				<div className="dashboard-btn-white">
+				<div
+					className="dashboard-btn-white"
+					onClick={() => router.push("/add-certificate")}
+				>
 					<BsPlus className="text-xl" />
 					<span>Add Certificate</span>
 				</div>
@@ -107,7 +116,7 @@ function Dashbord() {
 					<div className="mt-5 text-center  flex flex-col space-y-3">
 						<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
 							<span className="dc-table-header">
-								<span className="p-1">School / College</span>
+								<span className="p-1">College</span>
 							</span>
 							<span className="dc-table-header hidden sm:flex">
 								<span className="p-1">Degree</span>
@@ -187,8 +196,18 @@ function Dashbord() {
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col mt-8 md:mt-10">
-				<span className="btn self-start">Delete My Account</span>
+			<div className="w-full flex flex-col-reverse gap-4 md:gap-0 md:flex-row md:justify-between mt-8 md:mt-10">
+				<span className="dashboard-btn-red md:self-start">
+					<MdDelete className="text-lg" />
+					<span>Delete My Account</span>
+				</span>
+				<span
+					className="dashboard-btn-white md:self-start"
+					onClick={() => router.push("/profile")}
+				>
+					<BsArrowLeft className="text-lg" />
+					<span>Go back to profile</span>
+				</span>
 			</div>
 		</div>
 	);
