@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaCamera } from "react-icons/fa";
 import { BsArrowLeft } from "react-icons/bs";
 import Github from "../images/github.svg";
 import Instagram from "../images/instagram.svg";
@@ -9,9 +10,22 @@ import Twitter from "../images/twitter.svg";
 import LinkedIn from "../images/linkedin.svg";
 import Website from "../images/website.svg";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 function CreateProfile() {
 	const router = useRouter();
+	const [{ alt, src }, setImg] = useState({
+		src: null,
+		alt: null,
+	});
+	const onHandleImgChange = (e) => {
+		if (e.target.files[0]) {
+			setImg({
+				src: URL.createObjectURL(e.target.files[0]),
+				alt: e.target.files[0].name,
+			});
+		}
+	};
 	return (
 		<motion.div
 			className="flex flex-col items-center w-full p-10 sm:px-12 sm:py-12 mb-16"
@@ -45,6 +59,28 @@ function CreateProfile() {
 
 				<form className="flex flex-col space-y-4">
 					<div className="flex flex-col space-y-2">
+						<div className="w-full flex flex-col items-center justify-center">
+							<h1 className="text-dc-blue font-bold text-sm md:text-lg">
+								Profile Image
+							</h1>
+							<div className="bg-dc-gray p-5 rounded-3xl my-6">
+								<img
+									src={src}
+									alt={alt}
+									className="rounded-2xl object-cover sm:rounded-3xl w-36 h-36 md:w-60 md:h-60"
+								/>
+							</div>
+							<label className="p-4 text-xl sm:text-3xl bg-dc-blue rounded-xl text-dc-gray shadow-md hover:bg-white hover:text-dc-blue border border-transparent hover:border-dc-blue transition duration-200 cursor-pointer hover:shadow-lg ease-in-out mb-4">
+								<input
+									id="hidden-input"
+									type="file"
+									multiple
+									className="hidden"
+									onChange={onHandleImgChange}
+								/>
+								<FaCamera className="" />
+							</label>
+						</div>
 						<div className="w-full rounded-xl pr-5 sm:pr-6 bg-dc-gray focus:outline-none border border-transparent focus:shadow-inner focus:border-gray-200">
 							<select
 								id="month"
@@ -59,7 +95,7 @@ function CreateProfile() {
 								<option value="Instructor or Teacher">
 									Instructor or Teacher
 								</option>
-								<option value="Inter">Inter</option>
+								<option value="Inter">Intern</option>
 								<option value="Other">Other</option>
 							</select>
 						</div>
