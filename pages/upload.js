@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import { FaCamera } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { FiUpload } from "react-icons/fi";
 
 const Upload = () => {
@@ -29,11 +30,19 @@ const Upload = () => {
 				<link rel="icon" href="./logo.svg" />
 			</Head>
 			<div className="flex w-full flex-col items-center">
-				<h1 className="text-dc-blue font-bold text-3xl lg:text-4xl">
+				<motion.h1
+					className="text-dc-blue font-bold text-3xl lg:text-4xl"
+					initial={{ scale: 0.7 }}
+					animate={{ scale: 1 }}
+				>
 					Upload Post
-				</h1>
+				</motion.h1>
 
-				<div className="bg-dc-gray p-5 rounded-3xl my-6">
+				<motion.div
+					className="bg-dc-gray p-5 rounded-3xl my-6"
+					initial={{ scale: 0.7 }}
+					animate={{ scale: 1 }}
+				>
 					<img
 						src={src}
 						alt={alt}
@@ -41,8 +50,12 @@ const Upload = () => {
 						height={400}
 						className="rounded-2xl object-cover sm:rounded-3xl w-60 h-60 md:w-72 md:h-72 sm:w-64 sm:h-64 lg:w-96 lg:h-96"
 					/>
-				</div>
-				<label className="p-4 text-xl sm:text-3xl bg-dc-blue rounded-xl text-dc-gray shadow-md hover:bg-white hover:text-dc-blue border border-transparent hover:border-dc-blue transition duration-200 cursor-pointer hover:shadow-lg ease-in-out mb-4">
+				</motion.div>
+				<motion.label
+					className="p-4 text-xl sm:text-3xl bg-dc-blue rounded-xl text-dc-gray shadow-md hover:bg-white hover:text-dc-blue border border-transparent hover:border-dc-blue transition duration-200 cursor-pointer hover:shadow-lg ease-in-out mb-4"
+					initial={{ scale: 0.7 }}
+					animate={{ scale: 1 }}
+				>
 					<input
 						id="hidden-input"
 						type="file"
@@ -51,21 +64,25 @@ const Upload = () => {
 						onChange={onHandleImgChange}
 					/>
 					<FaCamera className="" />
-				</label>
+				</motion.label>
 
-				<textarea
+				<motion.textarea
 					placeholder="Write about post.."
 					rows="4"
+					initial={{ scale: 0.7 }}
+					animate={{ scale: 1 }}
 					className="dc-input w-full md:w-4/5 lg:w-1/2"
 				/>
 
-				<button
-					className="dashboard-btn-blue md:self-start mt-5 md:mt-8"
+				<motion.button
+					className="dashboard-btn-blue mt-5 md:mt-8"
 					onClick={(e) => e.preventDefault()}
+					initial={{ scale: 0.7 }}
+					animate={{ scale: 1 }}
 				>
 					<FiUpload className="text-xl" />
 					<span>Upload</span>
-				</button>
+				</motion.button>
 			</div>
 		</div>
 	);
