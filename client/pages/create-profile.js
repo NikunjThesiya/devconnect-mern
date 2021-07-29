@@ -57,7 +57,7 @@ function CreateProfile() {
 					* required fields.
 				</h1>
 
-				<form className="flex flex-col space-y-4">
+				<form className="flex flex-col space-y-4" action="#">
 					<div className="flex flex-col space-y-2">
 						<div className="w-full flex flex-col items-center justify-center">
 							<h1 className="text-dc-blue font-bold text-sm md:text-lg">
@@ -76,6 +76,7 @@ function CreateProfile() {
 									type="file"
 									multiple
 									className="hidden"
+									id="file"
 									onChange={onHandleImgChange}
 								/>
 								<FaCamera className="" />

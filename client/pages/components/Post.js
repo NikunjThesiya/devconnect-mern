@@ -9,15 +9,14 @@ import PostComment from "./PostComment";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-
-const ReadMore = dynamic(() => import("./ReadMore"));
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Post = ({ profile, image, description, likes, comments }) => {
 	const router = useRouter();
 	const [showModal, setShowModal] = useState(false);
 	return (
 		<motion.div
-			className="sm:w-[500px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7"
+			className="md:w-[600px] w-5/6 rounded-3xl bg-dc-gray my-4 p-4 sm:p-7"
 			initial={{ scale: 0.5 }}
 			animate={{ scale: 1 }}
 		>
@@ -62,7 +61,15 @@ const Post = ({ profile, image, description, likes, comments }) => {
 			</div>
 
 			<div className="flex flex-col items-start justify-start my-4 sm:my-5 text-xs sm:text-sm  text-gray-600 text-left">
-				<ReadMore>{description}</ReadMore>
+				<ReactReadMoreReadLess
+					charLimit={200}
+					readMoreText={"Read more ▼"}
+					readLessText={"Read less ▲"}
+					readMoreClassName="text-blue-500"
+					readLessClassName="text-blue-500"
+				>
+					{description}
+				</ReactReadMoreReadLess>
 			</div>
 
 			<div className="flex items-center justify-between text-xl sm:text-2xl mt-5 mb-3">
@@ -73,61 +80,11 @@ const Post = ({ profile, image, description, likes, comments }) => {
 					</div>
 					<div
 						className="flex items-center space-x-2 rounded-full bg-white text-gray-600 shadow-xl py-2 px-3 sm:px-4 cursor-pointer"
-						onClick={() => setShowModal(true)}
+						onClick={() => router.push("/post")}
 					>
 						<FaRegComment className="" />
 						<p className="text-xs sm:text-sm">{comments}</p>
 					</div>
-					{showModal ? (
-						<div className="bg-white">
-							<div className="justify-center bg-dc-gray bg-opacity-40 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none shadow-xl backdrop-filter backdrop-blur-md">
-								<motion.div
-									className="relative w-auto my-6 mx-auto max-w-3xl"
-									initial={{ scale: 0 }}
-									animate={{ scale: 1 }}
-								>
-									{/*content*/}
-									<div className="border-0 rounded-3xl  relative flex flex-col w-80 sm:w-96 md:w-96 lg:w-full bg-white outline-none focus:outline-none shadow-xl">
-										{/*header*/}
-										<div className="flex items-center justify-between px-7 py-4 border-b border-solid border-blueGray-200 rounded-t">
-											<h3 className="text-lg sm:text-xl text-gray-800 font-semibold">
-												Comments
-											</h3>
-											<button
-												className="p-1 ml-auto flex items-center justify-center border-0 text-white rounded-xl bg-dc-blue  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-												onClick={() => setShowModal(false)}
-											>
-												<IoCloseOutline />
-											</button>
-										</div>
-										{/*body*/}
-										<div className="p-6 flex flex-col max-h-96 overflow-y-scroll space-y-4 shadow-inner">
-											<PostComment />
-											<PostComment />
-											<PostComment />
-										</div>
-										{/*footer*/}
-										<form className="flex items-center justify-between p-4 sm:p-6 border-t border-solid border-blueGray-200 rounded-b space-x-2 sm:space-x-4">
-											<input
-												type="text"
-												placeholder="write a comment"
-												className="w-full text-sm focus:outline-none bg-gray-200 px-4 py-3 rounded-xl"
-											/>
-
-											<button
-												className="text-white rounded-xl background-transparent font-bold uppercase p-3 bg-dc-blue text-xl outline-none focus:outline-none ease-linear transition-all duration-150"
-												type="submit"
-												onClick={() => setShowModal(false)}
-											>
-												<RiSendPlaneFill />
-											</button>
-										</form>
-									</div>
-								</motion.div>
-							</div>
-							<div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-						</div>
-					) : null}
 				</div>
 			</div>
 		</motion.div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Profile from "../../images/profile.jpg";
-import ReadMore from "./ReadMore";
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const PostComment = () => {
 	return (
@@ -21,7 +21,13 @@ const PostComment = () => {
 				</h4>
 
 				<div className="text-left text-xs sm:text-sm mt-1">
-					<ReadMore>
+					<ReactReadMoreReadLess
+						charLimit={200}
+						readMoreText={"Read more ▼"}
+						readLessText={"Read less ▲"}
+						readMoreClassName="text-blue-500"
+						readLessClassName="text-blue-500"
+					>
 						A Computer Science portal for geeks. It contains well written, well
 						thought and well explained computer science, programming articles
 						and quizzes. It provides a variety of services for you to learn, so
@@ -29,7 +35,7 @@ const PostComment = () => {
 						Live, Online and Classroom Courses ,Frequent Coding Competitions,
 						Webinars by Industry Experts, Internship opportunities, and Job
 						Opportunities. Knowledge is power!
-					</ReadMore>
+					</ReactReadMoreReadLess>
 				</div>
 
 				<p className="text-left text-xs mt-2 text-gray-500 ">2 hours ago..</p>
